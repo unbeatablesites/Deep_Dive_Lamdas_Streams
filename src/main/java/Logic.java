@@ -1,7 +1,4 @@
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Logic {
 
@@ -20,6 +17,8 @@ public class Logic {
         Supplier<String> s = () -> "Java is fun";
         System.out.println(s.get());
 
+        BinaryOperator<Integer> add = (a,b) -> a+b;
+        System.out.println("The result of 5 and 5 is " + add.apply(5,5));
 
     }
 
