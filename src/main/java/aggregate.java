@@ -4,56 +4,34 @@ import java.util.stream.Collectors;
 public class aggregate {
 
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Paul", "Jane", "Michaela", "Sam");
-        //way to sort prior to Java 8 lambdas
-        Collections.sort(names, new Comparator<String>() {
-            @Override
-            public int compare(String a, String b) {
-                return b.compareTo(a);
-            }
-        });
-        //first iteration with lambda
-        Collections.sort(names, (String a, String b) -> {
-            return b.compareTo(a);
-        });
-        //now remove the return statement
-        Collections.sort(names, (String a, String b) -> b.compareTo(a));
+        Book book1 = new Book("Miss Peregrines's Home for Peculiar Children","Ranson","Riggs" , 382);
+        Book book2 = new Book("Harry Potter And the sorcerers Stone","JK","Rowling" , 411);
+        Book book3 = new Book("The Cat in the Hat","Dr","Seuss" , 45);
 
-        //now remove the data types and allow the compile to infer the type
-        Collections.sort(names, (a, b) -> b.compareTo(a));
+        List<Book> bookList = Arrays.asList(book1,book2,book3);
 
-
-        //total pages in your book collection
-        Book book1 = new Book("Miss Peregrine's Home for Peculiar Children",
-                "Ranson", "Riggs", 382);
-        Book book2 = new Book("Harry Potter and The Sorcerers Stone",
-                "JK", "Rowling", 411);
-        Book book3 = new Book("The Cat in the Hat",
-                "Dr", "Seuss", 45);
-
-        List<Book> books = Arrays.asList(book1, book2, book3);
-        int total = books.stream()
+        int total = bookList.stream()
                 .collect(Collectors.summingInt(Book::getPages));
         System.out.println(total);
 
-        //create a list with duplicates
-        List<Book> dupBooks = Arrays.asList(book1, book2, book3, book1, book2);
-        System.out.println("Before removing duplicates: ");
-        System.out.println(dupBooks.toString());
-
-        Collection<Book> noDups = new HashSet<>(dupBooks);
-        System.out.println("After removing duplicates: ");
-        System.out.println(noDups.toString());
 
 
-        //aggregate author first names into a list
-        List<String> list = books.stream()
+
+        List<Book> bookListWithDuplicates = Arrays.asList(book1,book2,book3,book1,book2);
+
+        System.out.println("Before removing duplicates");
+        System.out.println(bookListWithDuplicates.toString());
+
+        Collection<Book> nonDuplictedBooks = new HashSet<>(bookListWithDuplicates);
+
+        System.out.println("After removing duplicates");
+        System.out.println(nonDuplictedBooks.toString());
+
+        List<String> list = bookList.stream()
                 .map(Book::getAuthorLName)
                 .collect(Collectors.toList());
         System.out.println(list);
 
     }
+
 }
-//        //example of using Set to eliminate dups and sort automatically
-//        Set<Integer> numbers = new HashSet<>(asList(4, 3, 3, 3, 2, 1, 1, 1));
-//        System.out.println(numbers.toString());
