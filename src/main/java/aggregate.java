@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class aggregate {
@@ -21,6 +20,11 @@ public class aggregate {
 
         System.out.println("Before removing duplicates");
         System.out.println(bookListWithDuplicates.toString());
+
+        Collection<Book> nonDuplictedBooks = new HashSet<>();
+
+        System.out.println("After removing duplicates");
+        System.out.println(nonDuplictedBooks.toString());
 
 
     }
