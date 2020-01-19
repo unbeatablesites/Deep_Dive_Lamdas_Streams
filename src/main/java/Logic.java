@@ -20,6 +20,11 @@ public class Logic {
         BinaryOperator<Integer> add = (a,b) -> a+b;
         System.out.println("The result of 5 and 5 is " + add.apply(5,5));
 
+        UnaryOperator<String> str = (f) -> f.toUpperCase();
+        System.out.println(str.apply("qwertyuioplkjhgfdsazxcvbnm"));
+
+
+
     }
 
 }
