@@ -34,7 +34,7 @@ public class Logic {
         names.add("Frank");
         names.add("Brad");
         names.add("Mike");
-        names.add("Mike");
+        names.add("April");
 
         System.out.println(names);
 
