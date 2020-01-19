@@ -15,6 +15,14 @@ public class aggregate {
                 .collect(Collectors.summingInt(Book::getPages));
         System.out.println(total);
 
+
+
+        List<Book> bookListWithDuplicates = Arrays.asList(book1,book2,book3,book1,book2);
+
+        System.out.println("Before removing duplicates");
+        System.out.println(bookListWithDuplicates.toString());
+
+
     }
 
 }
