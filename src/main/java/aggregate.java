@@ -13,6 +13,7 @@ public class aggregate {
 
         int total = bookList.stream()
                 .collect(Collectors.summingInt(Book::getPages));
+        System.out.println(total);
 
     }
 
