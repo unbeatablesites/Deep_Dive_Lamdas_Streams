@@ -1,6 +1,7 @@
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Logic {
 
@@ -15,6 +16,11 @@ public class Logic {
 
         Function<Integer,String> converter = (num) -> Integer.toString(num);
         System.out.println("Char Length of int 200: " + converter.apply(263).length());
+
+        Supplier<String> s = () -> "Java is fun";
+        System.out.println(s.get());
+
+
     }
 
 }
