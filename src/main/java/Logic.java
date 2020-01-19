@@ -1,4 +1,5 @@
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Logic {
@@ -11,6 +12,9 @@ public class Logic {
 
         Consumer<String> ConsumerStr = (s) -> System.out.println(s.toLowerCase());
         ConsumerStr.accept("ABCDEFGHIGKLMNOPQRSTUVWXYZ");
+
+        Function<Integer,String> converter = (num) -> Integer.toString(num);
+        System.out.println("Length of 26: " + converter.apply(26).length());
     }
 
 }
