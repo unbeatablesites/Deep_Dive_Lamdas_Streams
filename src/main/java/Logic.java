@@ -45,9 +45,8 @@ public class Logic {
 
         List<String> namesArray = Arrays.asList("Paul","Jane","Michaela","Sam");
 
-        Collections.sort(names, Comparator.naturalOrder());
-
-        System.out.println(names+"---");
+        Collections.sort(names, Comparator.reverseOrder());
+        System.out.println(names+"---"+namesArray);
 
 
     }
