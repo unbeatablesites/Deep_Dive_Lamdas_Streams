@@ -14,6 +14,12 @@ public class aggregate {
                 .collect(Collectors.summingInt(Book::getPages));
         System.out.println(total);
 
+        List<String> firstNameOfAuthorList = bookList.stream()
+        .map(Book::getAuthorFName)
+        .collect(Collectors.toList());
+
+        System.out.println(firstNameOfAuthorList);
+
 
 
         List<Book> bookListWithDuplicates = Arrays.asList(book1,book2,book3,book1,book2);
