@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.*;
 
 public class Logic {
@@ -24,7 +26,30 @@ public class Logic {
         System.out.println(str.apply("qwertyuioplkjhgfdsazxcvbnm"));
 
 
+        List<String> names = new ArrayList<>();
 
+        names.add("Frank");
+        names.add("Brad");
+        names.add("Mike");
+        names.add("John");
+        names.add("Frank");
+        names.add("Brad");
+        names.add("Mike");
+        names.add("John");
+        names.add("Frank");
+        names.add("Brad");
+        names.add("Mike");
+        names.add("John");
+        names.add("Frank");
+        names.add("Brad");
+        names.add("Mike");
+        names.add("John");
+
+        System.out.println(names);
+
+        Predicate<List>  addName = (r) ->  r.size() < 10;
+        System.out.println(addName.test(names));
+        System.out.println(names);
     }
 
 }
