@@ -11,4 +11,36 @@ public class Book {
         this.authorLName = authorLName;
         this.pages = pages;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthorFName() {
+        return authorFName;
+    }
+
+    public void setAuthorFName(String authorFName) {
+        this.authorFName = authorFName;
+    }
+
+    public String getAuthorLName() {
+        return authorLName;
+    }
+
+    public void setAuthorLName(String authorLName) {
+        this.authorLName = authorLName;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
 }
