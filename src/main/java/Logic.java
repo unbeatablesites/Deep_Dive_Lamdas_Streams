@@ -1,3 +1,4 @@
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Logic {
@@ -8,6 +9,8 @@ public class Logic {
         System.out.println(stringLen.test("Apples") + " - Apples is less than 10");
 
 
+        Consumer<String> ConsumerStr = (s) -> System.out.println(s.toLowerCase());
+        ConsumerStr.accept("ABCDEFGHIGKLMNOPQRSTUVWXYZ");
     }
 
 }
