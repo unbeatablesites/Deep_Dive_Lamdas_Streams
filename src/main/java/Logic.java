@@ -14,7 +14,7 @@ public class Logic {
         ConsumerStr.accept("ABCDEFGHIGKLMNOPQRSTUVWXYZ");
 
         Function<Integer,String> converter = (num) -> Integer.toString(num);
-        System.out.println("Length of 26: " + converter.apply(26).length());
+        System.out.println(" Char Length of int 26: " + converter.apply(26).length());
     }
 
 }
