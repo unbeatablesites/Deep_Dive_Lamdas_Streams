@@ -35,15 +35,6 @@ public class Logic {
         names.add("Frank");
         names.add("Brad");
         names.add("Mike");
-        names.add("John");
-        names.add("Frank");
-        names.add("Brad");
-        names.add("Mike");
-        names.add("John");
-        names.add("Frank");
-        names.add("Brad");
-        names.add("Mike");
-        names.add("John");
 
         System.out.println(names);
 
