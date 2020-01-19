@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.function.*;
 
 public class Logic {
@@ -35,12 +34,22 @@ public class Logic {
         names.add("Frank");
         names.add("Brad");
         names.add("Mike");
+        names.add("Mike");
 
         System.out.println(names);
 
         Predicate<List>  addName = (r) ->  r.size() < 10;
         System.out.println(addName.test(names));
         System.out.println(names);
+
+
+        List<String> namesArray = Arrays.asList("Paul","Jane","Michaela","Sam");
+
+        Collections.sort(names, Comparator.naturalOrder());
+
+        System.out.println(names+"---");
+
+
     }
 
 }
